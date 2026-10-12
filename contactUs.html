@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!-- הערה לאוהד-חשוב!!!!: מחקנו את שמות התיקיות images וגם styles מכל הניתובים, כי בהעלאה לgit אפשר להעלות רק קבצים בודדים והוא לא יכול לגשת לתיקייה המקורית -->
+
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>טכנולוגיה מחברת | צור קשר</title>
+    <meta name="description" content="יצירת קשר עם צוות אתר טכנולוגיה מחברת והמלצה על פתרונות טכנולוגיים חדשים" />
+    <meta name="keywords" content="צור קשר, המלצה על טכנולוגיה, טכנולוגיה מחברת, משוב" />
+    <meta name="author" content="ניקול פטלך ותמר אסייהן" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link href="myStyle.css" rel="stylesheet" />
+</head>
+<body>
+<div id="container">
+
+    <header class="site-header">
+        <a href="index.html">
+            <img src="logo.png" alt="לוגו האתר טכנולוגיה מחברת" class="logo" />
+        </a>
+        <h1>טכנולוגיה מחברת</h1>
+
+        <nav aria-label="ניווט ראשי">
+            <ul class="nav-links">
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="about_autism.html">על הרצף</a></li>
+                <li><a href="existing-tech.html">טכנולוגיות קיימות</a></li>
+                <li><a href="future-tech.html">פיתוחי העתיד</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="tech-prep.html">התאמת טכנולוגיה</a></li>
+                <li><a href="contactUs.html" class="active">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav aria-label="פירורי לחם" class="breadcrumbs">
+        <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li>&gt;</li>
+            <li>צור קשר</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="white-box contact-box">
+            <h2>צרו איתנו קשר</h2>
+            <p>מעוניינים להציע כלי טכנולוגי שלא מופיע באתר? יש לכם שאלה או משוב? נשמח לשמוע מכם!</p>
+
+            <form action="#" method="post">
+                <input type="hidden" id="myEmail" name="name" value="yourMail@gmail.com" />
+
+                <p>
+                    <label for="fullName">שם מלא (שדה חובה):</label><br />
+                    <input type="text" id="fullName" name="fullName" placeholder="הקלד שם מלא" required />
+                </p>
+
+                <p>
+                    <label for="userEmail">כתובת דוא"ל (שדה חובה):</label><br />
+                    <input type="email" id="userEmail" name="userEmail" placeholder="example@mail.com" required />
+                </p>
+
+                <fieldset>
+                    <legend>סוג הפונה:</legend>
+                    <label for="role1">
+                        <input type="radio" id="role1" name="userRole" value="autistic" checked />
+                        אדם על הרצף
+                    </label><br />
+                    <label for="role2">
+                        <input type="radio" id="role2" name="userRole" value="parent" />
+                        הורה או בן משפחה
+                    </label><br />
+                    <label for="role3">
+                        <input type="radio" id="role3" name="userRole" value="professional" />
+                        איש מקצוע / מטפל
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>תחום הטכנולוגיה עליה תרצו להמליץ:</legend>
+                    <label for="topic1">
+                        <input type="checkbox" id="topic1" name="interest" value="aac" />
+                        תקשורת תומכת וחלופית (תת"ח)
+                    </label><br />
+                    <label for="topic2">
+                        <input type="checkbox" id="topic2" name="interest" value="sensory" />
+                        ויסות חושי וסביבה מרגיעה
+                    </label><br />
+                    <label for="topic3">
+                        <input type="checkbox" id="topic3" name="interest" value="routine" />
+                        ניהול זמן, סדר יום והתארגנות
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="messageText">פירוט ההודעה או ההמלצה:</label><br />
+                    <textarea id="messageText" name="messageText" rows="5" placeholder="כתבו כאן את פרטי ההמלצה על הטכנולוגיה..."></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" id="sendForm" value="שליחת הטופס" class="action-btn" />
+                </p>
+
+                <div id="feedback"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>פותח על ידי ניקול פטלך ותמר אסייהן במסגרת פרויקט לקורס "פיתוח אתרי אינטרנט" - תשפ"ו</p>
+    </footer>
+
+</div>
+</body>
+</html>
