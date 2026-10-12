@@ -19,13 +19,13 @@ function handleRadioSelection(techKey) {
     previewContainer.style.display = "block";
 
     if (techKey === "vr") {
-        mainImg.src = "images/existing_tech_2.jpg";
+        mainImg.src = "existing_tech_2.jpg";
         mainImg.alt = "מציאות מדומה להכרת בית ספר או מקום חדש";
     } else if (techKey === "robot") {
-        mainImg.src = "images/existing_tech_1.jpg";
+        mainImg.src = "existing_tech_1.jpg";
         mainImg.alt = "רובוט חברתי לתרגול שיחה ומפגש חברתי";
     } else if (techKey === "schedule") {
-        mainImg.src = "images/future_tech_3.jpg";
+        mainImg.src = "future_tech_3.jpg";
         mainImg.alt = "לוח סדר יום ורצף אירועים חזותי";
     }
 }
