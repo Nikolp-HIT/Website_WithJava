@@ -13,20 +13,24 @@
 }
 
 function handleRadioSelection(techKey) {
+    checkFormCompletion();
+
     const previewContainer = document.getElementById("mainTechPreview");
     const mainImg = document.getElementById("primaryTechImg");
 
-    previewContainer.style.display = "block";
+    if (previewContainer && mainImg) {
+        previewContainer.style.display = "block";
 
-    if (techKey === "vr") {
-        mainImg.src = "existing_tech_2.jpg";
-        mainImg.alt = "מציאות מדומה להכרת בית ספר או מקום חדש";
-    } else if (techKey === "robot") {
-        mainImg.src = "existing_tech_1.jpg";
-        mainImg.alt = "רובוט חברתי לתרגול שיחה ומפגש חברתי";
-    } else if (techKey === "schedule") {
-        mainImg.src = "future_tech_3.jpg";
-        mainImg.alt = "לוח סדר יום ורצף אירועים חזותי";
+        if (techKey === "vr") {
+            mainImg.src = "existing_tech_2.jpg";
+            mainImg.alt = "מציאות מדומה להכרת בית ספר או מקום חדש";
+        } else if (techKey === "robot") {
+            mainImg.src = "existing_tech_1.jpg";
+            mainImg.alt = "רובוט חברתי לתרגול שיחה ומפגש חברתי";
+        } else if (techKey === "schedule") {
+            mainImg.src = "future_tech_3.jpg";
+            mainImg.alt = "לוח סדר יום ורצף אירועים חזותי";
+        }
     }
 }
 
@@ -34,10 +38,12 @@ function toggleSupportImage(imgElementId, checkboxElementId) {
     const isChecked = document.getElementById(checkboxElementId).checked;
     const targetImage = document.getElementById(imgElementId);
 
-    if (isChecked === true) {
-        targetImage.style.opacity = "1";
-    } else {
-        targetImage.style.opacity = "0.5";
+    if (targetImage) {
+        if (isChecked === true) {
+            targetImage.style.opacity = "1";
+        } else {
+            targetImage.style.opacity = "0.5";
+        }
     }
 }
 
